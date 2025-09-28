@@ -1,0 +1,222 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="outdoorGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#064e3b"/>
+      <stop offset="30%" style="stop-color:#065f46"/>
+      <stop offset="70%" style="stop-color:#047857"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+
+    <radialGradient id="sunGlow" cx="80%" cy="20%" r="40%">
+      <stop offset="0%" style="stop-color:rgba(251,191,36,0.4)"/>
+      <stop offset="50%" style="stop-color:rgba(251,191,36,0.2)"/>
+      <stop offset="100%" style="stop-color:rgba(251,191,36,0)"/>
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="outdoor" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="gearShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="4" dy="8" stdDeviation="6" flood-color="rgba(0,0,0,0.4)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#outdoorGradient)"/>
+  <rect width="800" height="600" fill="url(#sunGlow)"/>
+
+  <!-- Mountain silhouettes -->
+  <g opacity="0.2">
+    <polygon points="0,400 100,300 200,350 300,280 400,320 500,260 600,300 700,250 800,280 800,600 0,600" fill="#047857"/>
+    <polygon points="0,450 150,350 250,380 350,320 450,360 550,300 650,340 750,290 800,320 800,600 0,600" fill="#065f46"/>
+  </g>
+
+  <!-- Hiking Backpack -->
+  <g transform="translate(100, 180)" filter="url(#gearShadow)">
+    <!-- Main pack -->
+    <ellipse cx="50" cy="80" rx="35" ry="60" fill="#1f2937" stroke="#374151" stroke-width="3"/>
+    <ellipse cx="50" cy="75" rx="30" ry="55" fill="#111827"/>
+
+    <!-- Top compartment -->
+    <ellipse cx="50" cy="40" rx="20" ry="25" fill="#374151" stroke="#1f2937"/>
+
+    <!-- Side pockets -->
+    <ellipse cx="15" cy="80" rx="8" ry="20" fill="#374151"/>
+    <ellipse cx="85" cy="80" rx="8" ry="20" fill="#374151"/>
+
+    <!-- Straps -->
+    <rect x="20" y="30" width="6" height="80" rx="3" fill="#6b7280"/>
+    <rect x="74" y="30" width="6" height="80" rx="3" fill="#6b7280"/>
+
+    <!-- External gear attachments -->
+    <circle cx="35" cy="60" r="4" fill="#dc2626" stroke="#b91c1c"/>
+    <circle cx="65" cy="65" r="3" fill="#2563eb" stroke="#1d4ed8"/>
+
+    <!-- RFID Tag on backpack -->
+    <rect x="65" y="20" width="12" height="8" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="71" cy="24" r="2" fill="none" stroke="#059669" stroke-width="1"/>
+  </g>
+
+  <!-- Camping Equipment -->
+  <g transform="translate(250, 300)" filter="url(#gearShadow)">
+    <!-- Sleeping bag -->
+    <rect x="0" y="0" width="80" height="25" rx="12" fill="#dc2626" stroke="#b91c1c" stroke-width="2"/>
+    <rect x="3" y="3" width="74" height="19" rx="10" fill="#b91c1c"/>
+
+    <!-- Tent -->
+    <polygon points="90,25 130,0 170,25 130,30" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <polygon points="95,25 130,5 165,25" fill="#16a34a"/>
+
+    <!-- Camping stove -->
+    <g transform="translate(180, 5)">
+      <rect x="0" y="0" width="25" height="15" rx="3" fill="#374151" stroke="#1f2937"/>
+      <circle cx="6" cy="7.5" r="3" fill="#1f2937" stroke="#374151"/>
+      <circle cx="19" cy="7.5" r="3" fill="#1f2937" stroke="#374151"/>
+      <rect x="8" y="-5" width="9" height="5" rx="2" fill="#6b7280"/>
+    </g>
+
+    <!-- Water bottles -->
+    <g transform="translate(0, 35)">
+      <rect x="0" y="0" width="8" height="25" rx="4" fill="#3b82f6" stroke="#1d4ed8"/>
+      <rect x="1" y="2" width="6" height="18" rx="3" fill="rgba(59, 130, 246, 0.3)"/>
+
+      <rect x="15" y="0" width="8" height="25" rx="4" fill="#059669" stroke="#047857"/>
+      <rect x="16" y="2" width="6" height="18" rx="3" fill="rgba(5, 150, 105, 0.3)"/>
+    </g>
+
+    <!-- RFID Tags -->
+    <rect x="40" y="-8" width="12" height="8" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="46" cy="-4" r="2" fill="none" stroke="#059669" stroke-width="1"/>
+
+    <rect x="140" y="-8" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="145" cy="-5" r="1.5" fill="none" stroke="#059669" stroke-width="0.8"/>
+  </g>
+
+  <!-- Climbing Gear -->
+  <g transform="translate(450, 200)" filter="url(#gearShadow)">
+    <!-- Climbing rope -->
+    <path d="M0 0 Q20 10 40 0 Q60 -10 80 0 Q100 10 120 0" stroke="#fbbf24" stroke-width="8" fill="none"/>
+    <path d="M0 10 Q20 20 40 10 Q60 0 80 10 Q100 20 120 10" stroke="#fbbf24" stroke-width="8" fill="none"/>
+    <path d="M0 20 Q20 30 40 20 Q60 10 80 20 Q100 30 120 20" stroke="#fbbf24" stroke-width="8" fill="none"/>
+
+    <!-- Carabiners -->
+    <g transform="translate(20, 40)">
+      <ellipse cx="0" cy="0" rx="6" ry="12" fill="none" stroke="#9ca3af" stroke-width="3"/>
+      <rect x="-2" y="-8" width="4" height="4" rx="2" fill="#6b7280"/>
+
+      <ellipse cx="25" cy="0" rx="6" ry="12" fill="none" stroke="#9ca3af" stroke-width="3"/>
+      <rect x="23" y="-8" width="4" height="4" rx="2" fill="#6b7280"/>
+
+      <ellipse cx="50" cy="0" rx="6" ry="12" fill="none" stroke="#9ca3af" stroke-width="3"/>
+      <rect x="48" y="-8" width="4" height="4" rx="2" fill="#6b7280"/>
+    </g>
+
+    <!-- Helmet -->
+    <ellipse cx="80" cy="80" rx="25" ry="20" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <ellipse cx="80" cy="75" rx="20" ry="15" fill="#f9fafb"/>
+    <rect x="70" y="70" width="20" height="4" rx="2" fill="#059669"/>
+
+    <!-- RFID Tags -->
+    <rect x="60" y="-10" width="12" height="8" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="66" cy="-6" r="2" fill="none" stroke="#059669" stroke-width="1"/>
+
+    <rect x="95" y="60" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="100" cy="63" r="1.5" fill="none" stroke="#059669" stroke-width="0.8"/>
+  </g>
+
+  <!-- Navigation Tools -->
+  <g transform="translate(600, 250)" filter="url(#gearShadow)">
+    <!-- Compass -->
+    <circle cx="25" cy="25" r="20" fill="#1f2937" stroke="#374151" stroke-width="3"/>
+    <circle cx="25" cy="25" r="15" fill="#ffffff"/>
+    <circle cx="25" cy="25" r="12" fill="#f3f4f6"/>
+    <!-- Compass needle -->
+    <rect x="23" y="15" width="4" height="10" rx="2" fill="#dc2626"/>
+    <rect x="23" y="25" width="4" height="10" rx="2" fill="#ffffff" stroke="#374151"/>
+    <!-- Cardinal directions -->
+    <text x="25" y="12" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="#000">N</text>
+    <text x="38" y="28" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="#000">E</text>
+
+    <!-- GPS device -->
+    <rect x="60" y="10" width="30" height="40" rx="4" fill="#1f2937" stroke="#374151"/>
+    <rect x="62" y="12" width="26" height="15" rx="2" fill="#22c55e"/>
+    <text x="75" y="21" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="#000">GPS</text>
+    <!-- GPS buttons -->
+    <rect x="67" y="30" width="6" height="4" rx="1" fill="#374151"/>
+    <rect x="77" y="30" width="6" height="4" rx="1" fill="#374151"/>
+
+    <!-- Map -->
+    <rect x="0" y="60" width="60" height="40" rx="3" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="2" y="62" width="56" height="36" rx="2" fill="#f9fafb"/>
+    <!-- Map contours -->
+    <path d="M5 70 Q15 65 25 70 T45 75" stroke="#059669" stroke-width="1" fill="none"/>
+    <path d="M10 80 Q20 75 30 80 T50 85" stroke="#059669" stroke-width="1" fill="none"/>
+    <path d="M15 90 Q25 85 35 90 T55 95" stroke="#059669" stroke-width="1" fill="none"/>
+
+    <!-- RFID Tags -->
+    <rect x="35" y="0" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="40" cy="3" r="1.5" fill="none" stroke="#059669" stroke-width="0.8"/>
+
+    <rect x="30" y="105" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="35" cy="108" r="1.5" fill="none" stroke="#059669" stroke-width="0.8"/>
+  </g>
+
+  <!-- FindMate Scanner -->
+  <g transform="translate(320, 450)" filter="url(#outdoor)">
+    <!-- Scanner cube -->
+    <rect x="0" y="20" width="100" height="100" rx="12" fill="url(#outdoorGradient)" stroke="#059669" stroke-width="4"/>
+    <rect x="5" y="25" width="90" height="90" rx="10" fill="rgba(5, 150, 105, 0.15)"/>
+
+    <!-- Logo/Brand -->
+    <circle cx="50" cy="70" r="18" fill="none" stroke="#059669" stroke-width="3"/>
+    <text x="50" y="105" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#059669">FindMate</text>
+
+    <!-- RFID Scanning Waves -->
+    <g opacity="0.8">
+      <circle cx="50" cy="70" r="28" fill="none" stroke="#059669" stroke-width="3" opacity="0.6">
+        <animate attributeName="r" values="28;40;28" dur="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;0;0.6" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="50" cy="70" r="35" fill="none" stroke="#10b981" stroke-width="2" opacity="0.4">
+        <animate attributeName="r" values="35;50;35" dur="3.5s" repeatCount="indefinite" begin="0.6s"/>
+        <animate attributeName="opacity" values="0.4;0;0.4" dur="3.5s" repeatCount="indefinite" begin="0.6s"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Wildlife/Nature Elements -->
+  <g opacity="0.15">
+    <text x="150" y="80" font-family="Arial" font-size="20" fill="#059669">🌲</text>
+    <text x="650" y="100" font-family="Arial" font-size="18" fill="#10b981">🏔️</text>
+    <text x="50" y="500" font-family="Arial" font-size="16" fill="#059669">🦅</text>
+    <text x="700" y="450" font-family="Arial" font-size="22" fill="#10b981">⛺</text>
+  </g>
+
+  <!-- Professional Badge -->
+  <g transform="translate(500, 50)" opacity="0.9">
+    <rect x="0" y="0" width="170" height="65" rx="8" fill="rgba(0,0,0,0.4)" stroke="rgba(5, 150, 105, 0.4)"/>
+    <text x="85" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#059669">OUTDOOR GEAR</text>
+    <text x="85" y="40" text-anchor="middle" font-family="Arial" font-size="10" fill="#10b981">ADVENTURE READY</text>
+    <text x="85" y="52" text-anchor="middle" font-family="Arial" font-size="8" fill="#34d399">SAFETY FIRST</text>
+  </g>
+
+  <!-- Floating nature elements -->
+  <g opacity="0.3">
+    <circle cx="200" cy="120" r="2" fill="#059669">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 15,-10; 0,0" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="400" r="1.5" fill="#10b981">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -12,8; 0,0" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="350" r="2.5" fill="#059669">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 10,-15; 0,0" dur="12s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

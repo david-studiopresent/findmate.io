@@ -1,0 +1,260 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="academicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4c1d95"/>
+      <stop offset="30%" style="stop-color:#6d28d9"/>
+      <stop offset="70%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+
+    <radialGradient id="studyLight" cx="30%" cy="40%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(196,181,253,0.3)"/>
+      <stop offset="50%" style="stop-color:rgba(196,181,253,0.1)"/>
+      <stop offset="100%" style="stop-color:rgba(196,181,253,0)"/>
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="academic" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="bookShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#academicGradient)"/>
+  <rect width="800" height="600" fill="url(#studyLight)"/>
+
+  <!-- Library/Study Environment -->
+  <g opacity="0.1">
+    <rect x="0" y="450" width="800" height="150" fill="url(#academicGradient)"/>
+    <rect x="100" y="300" width="20" height="300" fill="#8b5cf6"/>
+    <rect x="200" y="250" width="20" height="350" fill="#8b5cf6"/>
+    <rect x="300" y="280" width="20" height="320" fill="#8b5cf6"/>
+  </g>
+
+  <!-- Laptop -->
+  <g transform="translate(200, 200)" filter="url(#bookShadow)">
+    <!-- Laptop base -->
+    <rect x="0" y="20" width="120" height="80" rx="6" fill="#374151" stroke="#1f2937" stroke-width="2"/>
+    <rect x="3" y="23" width="114" height="74" rx="4" fill="#111827"/>
+
+    <!-- Screen -->
+    <rect x="5" y="5" width="110" height="70" rx="4" fill="#1f2937" stroke="#374151" stroke-width="2"/>
+    <rect x="8" y="8" width="104" height="64" rx="2" fill="#000000"/>
+    <rect x="12" y="12" width="96" height="54" rx="1" fill="#6366f1"/>
+
+    <!-- Keyboard -->
+    <rect x="10" y="30" width="100" height="60" rx="2" fill="#374151"/>
+    <g fill="#1f2937">
+      <rect x="15" y="35" width="6" height="6" rx="1"/>
+      <rect x="25" y="35" width="6" height="6" rx="1"/>
+      <rect x="35" y="35" width="6" height="6" rx="1"/>
+      <rect x="45" y="35" width="6" height="6" rx="1"/>
+      <rect x="55" y="35" width="6" height="6" rx="1"/>
+      <rect x="65" y="35" width="6" height="6" rx="1"/>
+      <rect x="75" y="35" width="6" height="6" rx="1"/>
+      <rect x="85" y="35" width="6" height="6" rx="1"/>
+      <rect x="95" y="35" width="6" height="6" rx="1"/>
+    </g>
+
+    <!-- RFID Tag on laptop -->
+    <rect x="95" y="0" width="12" height="8" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="101" cy="4" r="2" fill="none" stroke="#8b5cf6" stroke-width="1"/>
+  </g>
+
+  <!-- Textbooks Stack -->
+  <g transform="translate(80, 320)" filter="url(#bookShadow)">
+    <!-- Bottom book -->
+    <rect x="0" y="40" width="100" height="15" rx="2" fill="#dc2626" stroke="#b91c1c"/>
+    <text x="50" y="50" text-anchor="middle" font-family="Arial" font-size="8" font-weight="bold" fill="#fff">CALCULUS</text>
+
+    <!-- Middle book -->
+    <rect x="5" y="25" width="95" height="15" rx="2" fill="#16a34a" stroke="#15803d"/>
+    <text x="52.5" y="35" text-anchor="middle" font-family="Arial" font-size="8" font-weight="bold" fill="#fff">PHYSICS</text>
+
+    <!-- Top book -->
+    <rect x="10" y="10" width="90" height="15" rx="2" fill="#2563eb" stroke="#1d4ed8"/>
+    <text x="55" y="20" text-anchor="middle" font-family="Arial" font-size="8" font-weight="bold" fill="#fff">CHEMISTRY</text>
+
+    <!-- Open notebook -->
+    <rect x="120" y="20" width="60" height="40" rx="3" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="150" y="20" width="30" height="40" rx="3" fill="#f9fafb" stroke="#e5e7eb"/>
+    <!-- Lines on notebook -->
+    <line x1="125" y1="28" x2="175" y2="28" stroke="#d1d5db" stroke-width="1"/>
+    <line x1="125" y1="33" x2="175" y2="33" stroke="#d1d5db" stroke-width="1"/>
+    <line x1="125" y1="38" x2="175" y2="38" stroke="#d1d5db" stroke-width="1"/>
+    <line x1="125" y1="43" x2="175" y2="43" stroke="#d1d5db" stroke-width="1"/>
+    <line x1="125" y1="48" x2="175" y2="48" stroke="#d1d5db" stroke-width="1"/>
+    <line x1="125" y1="53" x2="175" y2="53" stroke="#d1d5db" stroke-width="1"/>
+
+    <!-- RFID Tag on books -->
+    <rect x="50" y="0" width="12" height="8" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="56" cy="4" r="2" fill="none" stroke="#8b5cf6" stroke-width="1"/>
+  </g>
+
+  <!-- Backpack -->
+  <g transform="translate(450, 280)" filter="url(#bookShadow)">
+    <!-- Main compartment -->
+    <ellipse cx="50" cy="60" rx="40" ry="50" fill="#1f2937" stroke="#374151" stroke-width="2"/>
+    <ellipse cx="50" cy="55" rx="35" ry="45" fill="#111827"/>
+
+    <!-- Front pocket -->
+    <ellipse cx="50" cy="40" rx="25" ry="20" fill="#374151" stroke="#1f2937"/>
+    <ellipse cx="50" cy="38" rx="20" ry="15" fill="#1f2937"/>
+
+    <!-- Straps -->
+    <rect x="20" y="20" width="8" height="60" rx="4" fill="#374151"/>
+    <rect x="72" y="20" width="8" height="60" rx="4" fill="#374151"/>
+
+    <!-- Zippers -->
+    <rect x="40" y="25" width="20" height="3" rx="1.5" fill="#9ca3af"/>
+    <rect x="35" y="50" width="30" height="3" rx="1.5" fill="#9ca3af"/>
+
+    <!-- RFID Tag on backpack -->
+    <rect x="65" y="10" width="12" height="8" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="71" cy="14" r="2" fill="none" stroke="#8b5cf6" stroke-width="1"/>
+  </g>
+
+  <!-- Study Supplies -->
+  <g transform="translate(400, 150)" filter="url(#bookShadow)">
+    <!-- Calculator -->
+    <rect x="0" y="0" width="40" height="60" rx="4" fill="#1f2937" stroke="#374151"/>
+    <rect x="2" y="2" width="36" height="20" rx="2" fill="#22c55e"/>
+    <text x="20" y="14" text-anchor="middle" font-family="Arial" font-size="8" font-weight="bold" fill="#000">TI-84</text>
+
+    <!-- Calculator buttons -->
+    <g fill="#374151">
+      <rect x="6" y="26" width="6" height="6" rx="1"/>
+      <rect x="15" y="26" width="6" height="6" rx="1"/>
+      <rect x="24" y="26" width="6" height="6" rx="1"/>
+      <rect x="33" y="26" width="6" height="6" rx="1"/>
+      <rect x="6" y="35" width="6" height="6" rx="1"/>
+      <rect x="15" y="35" width="6" height="6" rx="1"/>
+      <rect x="24" y="35" width="6" height="6" rx="1"/>
+      <rect x="33" y="35" width="6" height="6" rx="1"/>
+    </g>
+
+    <!-- Pens and pencils -->
+    <g transform="translate(50, 10)">
+      <rect x="0" y="0" width="3" height="40" rx="1" fill="#fbbf24"/>
+      <rect x="0" y="0" width="3" height="8" rx="1" fill="#f59e0b"/>
+
+      <rect x="6" y="0" width="3" height="40" rx="1" fill="#3b82f6"/>
+      <rect x="6" y="0" width="3" height="8" rx="1" fill="#1d4ed8"/>
+
+      <rect x="12" y="0" width="3" height="40" rx="1" fill="#ef4444"/>
+      <rect x="12" y="0" width="3" height="8" rx="1" fill="#dc2626"/>
+
+      <rect x="18" y="0" width="3" height="40" rx="1" fill="#64748b"/>
+      <circle cx="19.5" cy="40" r="2" fill="#1f2937"/>
+    </g>
+
+    <!-- Highlighters -->
+    <g transform="translate(80, 15)">
+      <rect x="0" y="0" width="4" height="30" rx="2" fill="#fbbf24" opacity="0.7"/>
+      <rect x="6" y="0" width="4" height="30" rx="2" fill="#22c55e" opacity="0.7"/>
+      <rect x="12" y="0" width="4" height="30" rx="2" fill="#ec4899" opacity="0.7"/>
+    </g>
+
+    <!-- RFID Tags -->
+    <rect x="20" y="-8" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="25" cy="-5" r="1.5" fill="none" stroke="#8b5cf6" stroke-width="0.8"/>
+
+    <rect x="70" y="50" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="75" cy="53" r="1.5" fill="none" stroke="#8b5cf6" stroke-width="0.8"/>
+  </g>
+
+  <!-- Lab Equipment -->
+  <g transform="translate(600, 200)" filter="url(#bookShadow)">
+    <!-- Safety goggles -->
+    <ellipse cx="25" cy="15" rx="15" ry="8" fill="rgba(139, 92, 246, 0.3)" stroke="#8b5cf6"/>
+    <ellipse cx="15" cy="15" rx="6" ry="4" fill="rgba(139, 92, 246, 0.1)"/>
+    <ellipse cx="35" cy="15" rx="6" ry="4" fill="rgba(139, 92, 246, 0.1)"/>
+    <rect x="10" y="13" width="30" height="4" rx="2" fill="#374151"/>
+
+    <!-- Lab notebook -->
+    <rect x="0" y="40" width="50" height="35" rx="3" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="2" y="42" width="46" height="8" rx="1" fill="#8b5cf6"/>
+    <text x="25" y="48" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="#fff">LAB NOTES</text>
+
+    <!-- Lines in notebook -->
+    <line x1="5" y1="55" x2="45" y2="55" stroke="#d1d5db" stroke-width="1"/>
+    <line x1="5" y1="60" x2="45" y2="60" stroke="#d1d5db" stroke-width="1"/>
+    <line x1="5" y1="65" x2="45" y2="65" stroke="#d1d5db" stroke-width="1"/>
+    <line x1="5" y1="70" x2="45" y2="70" stroke="#d1d5db" stroke-width="1"/>
+
+    <!-- USB drives -->
+    <rect x="60" y="50" width="15" height="8" rx="2" fill="#1f2937" stroke="#374151"/>
+    <rect x="62" y="52" width="6" height="4" rx="1" fill="#8b5cf6"/>
+
+    <rect x="60" y="65" width="15" height="8" rx="2" fill="#1f2937" stroke="#374151"/>
+    <rect x="62" y="67" width="6" height="4" rx="1" fill="#22c55e"/>
+
+    <!-- RFID Tags -->
+    <rect x="30" y="0" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="35" cy="3" r="1.5" fill="none" stroke="#8b5cf6" stroke-width="0.8"/>
+
+    <rect x="65" y="80" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="70" cy="83" r="1.5" fill="none" stroke="#8b5cf6" stroke-width="0.8"/>
+  </g>
+
+  <!-- FindMate Scanner -->
+  <g transform="translate(250, 430)" filter="url(#academic)">
+    <!-- Scanner cube -->
+    <rect x="0" y="20" width="90" height="90" rx="10" fill="url(#academicGradient)" stroke="#8b5cf6" stroke-width="4"/>
+    <rect x="5" y="25" width="80" height="80" rx="8" fill="rgba(139, 92, 246, 0.15)"/>
+
+    <!-- Logo/Brand -->
+    <circle cx="45" cy="65" r="16" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+    <text x="45" y="95" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#8b5cf6">FindMate</text>
+
+    <!-- RFID Scanning Waves -->
+    <g opacity="0.7">
+      <circle cx="45" cy="65" r="25" fill="none" stroke="#8b5cf6" stroke-width="3" opacity="0.5">
+        <animate attributeName="r" values="25;35;25" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0;0.5" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="45" cy="65" r="32" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0.3">
+        <animate attributeName="r" values="32;45;32" dur="4s" repeatCount="indefinite" begin="0.8s"/>
+        <animate attributeName="opacity" values="0.3;0;0.3" dur="4s" repeatCount="indefinite" begin="0.8s"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Academic Icons -->
+  <g opacity="0.2">
+    <text x="100" y="100" font-family="Arial" font-size="24" fill="#8b5cf6">📚</text>
+    <text x="600" y="120" font-family="Arial" font-size="20" fill="#a78bfa">🎓</text>
+    <text x="700" y="350" font-family="Arial" font-size="18" fill="#8b5cf6">📝</text>
+    <text x="50" y="500" font-family="Arial" font-size="22" fill="#a78bfa">🔬</text>
+  </g>
+
+  <!-- Professional Badge -->
+  <g transform="translate(500, 50)" opacity="0.9">
+    <rect x="0" y="0" width="160" height="65" rx="8" fill="rgba(0,0,0,0.4)" stroke="rgba(139, 92, 246, 0.4)"/>
+    <text x="80" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#8b5cf6">STUDENT LIFE</text>
+    <text x="80" y="40" text-anchor="middle" font-family="Arial" font-size="10" fill="#a78bfa">ACADEMIC SUCCESS</text>
+    <text x="80" y="52" text-anchor="middle" font-family="Arial" font-size="8" fill="#c4b5fd">NEVER MISS CLASS PREP</text>
+  </g>
+
+  <!-- Floating academic elements -->
+  <g opacity="0.4">
+    <circle cx="150" cy="120" r="2" fill="#8b5cf6">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 12,-8; 0,0" dur="9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="550" cy="450" r="1.5" fill="#a78bfa">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -10,6; 0,0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" y="280" r="2.5" fill="#8b5cf6">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 8,-12; 0,0" dur="11s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

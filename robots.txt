@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://findmate.io/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# Specific directives for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block access to sensitive files
+Disallow: /test-form.html
+Disallow: /google-apps-script-example.js
+Disallow: /*.log
+
+# Allow specific assets
+Allow: /images/
+Allow: /videos/
+Allow: /favicon.svg
+Allow: /favicon.ico

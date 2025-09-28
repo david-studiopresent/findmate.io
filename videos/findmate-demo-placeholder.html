@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .video-placeholder {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-animation {
+            width: 300px;
+            height: 200px;
+            position: relative;
+        }
+
+        .findmate-cube {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            border-radius: 8px;
+            position: absolute;
+            left: 50px;
+            top: 70px;
+            animation: pulse 2s infinite;
+        }
+
+        .rfid-waves {
+            position: absolute;
+            left: 80px;
+            top: 100px;
+        }
+
+        .rfid-wave {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #2563eb;
+            border-radius: 50%;
+            position: absolute;
+            animation: expand 3s infinite;
+        }
+
+        .rfid-wave:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .rfid-wave:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .mobile-app {
+            width: 80px;
+            height: 140px;
+            background: #1f2937;
+            border-radius: 15px;
+            position: absolute;
+            right: 50px;
+            top: 30px;
+            padding: 8px;
+        }
+
+        .app-screen {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-header {
+            height: 20px;
+            background: #2563eb;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            font-weight: bold;
+        }
+
+        .status-item {
+            height: 16px;
+            margin: 4px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding: 2px 4px;
+            font-size: 6px;
+        }
+
+        .status-complete {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+        .status-missing {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+
+        .scanning {
+            background: #fef3c7;
+            color: #d97706;
+            animation: blink 1s infinite;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-left: 20px solid #2563eb;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 4px;
+        }
+
+        .video-title {
+            color: #1f2937;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .video-subtitle {
+            color: #6b7280;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes expand {
+            0% {
+                opacity: 0.8;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(2);
+            }
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="video-placeholder">
+        <div class="video-title">FindMate Demo</div>
+        <div class="video-subtitle">See how RFID tracking works</div>
+
+        <div class="demo-animation">
+            <!-- FindMate Cube -->
+            <div class="findmate-cube"></div>
+
+            <!-- RFID Waves -->
+            <div class="rfid-waves">
+                <div class="rfid-wave"></div>
+                <div class="rfid-wave"></div>
+                <div class="rfid-wave"></div>
+            </div>
+
+            <!-- Mobile App -->
+            <div class="mobile-app">
+                <div class="app-screen">
+                    <div class="app-header">FindMate</div>
+                    <div class="status-item status-complete">📷 Camera Kit ✓</div>
+                    <div class="status-item status-missing">🎒 Travel Pack ✗</div>
+                    <div class="status-item scanning">🔧 Tools...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="play-button">
+            <div class="play-icon"></div>
+        </div>
+    </div>
+</body>
+</html>

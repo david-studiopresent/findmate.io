@@ -1,0 +1,26 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded rectangle background -->
+  <rect width="32" height="32" rx="6" fill="url(#faviconGradient)"/>
+
+  <!-- FindMate cube representation -->
+  <g transform="translate(6, 6)">
+    <!-- Main cube -->
+    <rect x="2" y="4" width="16" height="16" rx="2" fill="rgba(255,255,255,0.9)"/>
+    <!-- Top face -->
+    <path d="M2 4 L6 0 L22 0 L18 4 Z" fill="rgba(255,255,255,0.7)"/>
+    <!-- Side face -->
+    <path d="M18 4 L22 0 L22 16 L18 20 Z" fill="rgba(255,255,255,0.5)"/>
+
+    <!-- RFID symbol -->
+    <circle cx="10" cy="12" r="3" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+    <circle cx="10" cy="12" r="1.5" fill="none" stroke="#2563eb" stroke-width="1"/>
+    <path d="M8.5 12 L11.5 12 M10 10.5 L10 13.5" stroke="#2563eb" stroke-width="1"/>
+  </g>
+</svg>

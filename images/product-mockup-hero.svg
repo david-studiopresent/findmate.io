@@ -1,0 +1,99 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa"/>
+      <stop offset="100%" style="stop-color:#e9ecef"/>
+    </linearGradient>
+    <linearGradient id="cube" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f3f4f6"/>
+    </linearGradient>
+    <linearGradient id="cubeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="8" dy="12" stdDeviation="8" flood-color="rgba(0,0,0,0.15)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- FindMate Cube Device (13x13cm perspective) -->
+  <g transform="translate(200, 200)" filter="url(#shadow)">
+    <!-- Cube base -->
+    <path d="M50 200 L200 200 L250 150 L100 150 Z" fill="url(#cube)" stroke="#d1d5db" stroke-width="2"/>
+    <!-- Cube front -->
+    <rect x="50" y="200" width="150" height="150" fill="url(#cube)" stroke="#d1d5db" stroke-width="2"/>
+    <!-- Cube top -->
+    <path d="M50 200 L100 150 L250 150 L200 200 Z" fill="url(#cubeTop)" stroke="#1d4ed8" stroke-width="2"/>
+
+    <!-- RFID antenna symbol -->
+    <g transform="translate(125, 275)">
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#2563eb" stroke-width="2"/>
+      <circle cx="0" cy="0" r="15" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.7"/>
+      <circle cx="0" cy="0" r="22" fill="none" stroke="#2563eb" stroke-width="1" opacity="0.5"/>
+      <path d="M-3 -3 L3 3 M3 -3 L-3 3" stroke="#2563eb" stroke-width="2"/>
+    </g>
+
+    <!-- FindMate logo on cube -->
+    <text x="125" y="320" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#1f2937">FindMate</text>
+  </g>
+
+  <!-- Mobile App Interface -->
+  <g transform="translate(500, 150)" filter="url(#shadow)">
+    <!-- Phone outline -->
+    <rect x="0" y="0" width="180" height="320" rx="25" fill="#1f2937"/>
+    <rect x="8" y="8" width="164" height="304" rx="20" fill="#ffffff"/>
+
+    <!-- App interface -->
+    <rect x="16" y="30" width="148" height="20" rx="10" fill="#2563eb"/>
+    <text x="90" y="43" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="white">FindMate</text>
+
+    <!-- Sets list -->
+    <rect x="24" y="70" width="132" height="40" rx="8" fill="#f3f4f6" stroke="#e5e7eb"/>
+    <circle cx="40" cy="85" r="6" fill="#10b981"/>
+    <text x="52" y="88" font-family="Inter, sans-serif" font-size="9" font-weight="500" fill="#1f2937">Photographer Kit</text>
+    <text x="52" y="98" font-family="Inter, sans-serif" font-size="7" fill="#6b7280">5/5 items present</text>
+
+    <rect x="24" y="120" width="132" height="40" rx="8" fill="#f3f4f6" stroke="#e5e7eb"/>
+    <circle cx="40" cy="135" r="6" fill="#ef4444"/>
+    <text x="52" y="138" font-family="Inter, sans-serif" font-size="9" font-weight="500" fill="#1f2937">Travel Essentials</text>
+    <text x="52" y="148" font-family="Inter, sans-serif" font-size="7" fill="#6b7280">2/4 items missing</text>
+
+    <rect x="24" y="170" width="132" height="40" rx="8" fill="#f3f4f6" stroke="#e5e7eb"/>
+    <circle cx="40" cy="185" r="6" fill="#f59e0b"/>
+    <text x="52" y="188" font-family="Inter, sans-serif" font-size="9" font-weight="500" fill="#1f2937">Contractor Tools</text>
+    <text x="52" y="198" font-family="Inter, sans-serif" font-size="7" fill="#6b7280">Scanning...</text>
+
+    <!-- Scan button -->
+    <rect x="24" y="260" width="132" height="35" rx="18" fill="#2563eb"/>
+    <text x="90" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="white">Scan Bag</text>
+  </g>
+
+  <!-- RFID Tags scattered -->
+  <g transform="translate(750, 300)">
+    <rect x="0" y="0" width="25" height="15" rx="3" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+    <circle cx="12.5" cy="7.5" r="3" fill="none" stroke="#2563eb" stroke-width="1"/>
+  </g>
+
+  <g transform="translate(800, 250)">
+    <rect x="0" y="0" width="25" height="15" rx="3" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+    <circle cx="12.5" cy="7.5" r="3" fill="none" stroke="#2563eb" stroke-width="1"/>
+  </g>
+
+  <g transform="translate(730, 350)">
+    <rect x="0" y="0" width="25" height="15" rx="3" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+    <circle cx="12.5" cy="7.5" r="3" fill="none" stroke="#2563eb" stroke-width="1"/>
+  </g>
+
+  <!-- Floating elements for tech feel -->
+  <circle cx="900" cy="150" r="2" fill="#2563eb" opacity="0.6"/>
+  <circle cx="950" cy="200" r="1.5" fill="#2563eb" opacity="0.4"/>
+  <circle cx="1000" cy="180" r="2.5" fill="#2563eb" opacity="0.5"/>
+
+  <!-- FindMate branding -->
+  <text x="600" y="750" text-anchor="middle" font-family="Inter, sans-serif" font-size="48" font-weight="700" fill="#1f2937">FindMate</text>
+  <text x="600" y="775" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="400" fill="#6b7280">Never Forget Your Essentials Again</text>
+</svg>

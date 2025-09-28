@@ -1,0 +1,217 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="30%" style="stop-color:#f8f9fa"/>
+      <stop offset="70%" style="stop-color:#f1f5f9"/>
+      <stop offset="100%" style="stop-color:#e2e8f0"/>
+    </linearGradient>
+
+    <radialGradient id="accentGlow" cx="70%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(37,99,235,0.08)"/>
+      <stop offset="50%" style="stop-color:rgba(37,99,235,0.04)"/>
+      <stop offset="100%" style="stop-color:rgba(37,99,235,0)"/>
+    </radialGradient>
+
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(37,99,235,0.1)"/>
+      <stop offset="50%" style="stop-color:rgba(59,130,246,0.05)"/>
+      <stop offset="100%" style="stop-color:rgba(37,99,235,0.1)"/>
+    </linearGradient>
+
+    <!-- Patterns for texture -->
+    <pattern id="dotPattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <circle cx="30" cy="30" r="1.5" fill="rgba(37,99,235,0.15)"/>
+    </pattern>
+
+    <pattern id="gridPattern" patternUnits="userSpaceOnUse" width="100" height="100">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(37,99,235,0.06)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Filters -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="soften" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- Main Background -->
+  <rect width="1920" height="1080" fill="url(#mainGradient)"/>
+
+  <!-- Accent Glow Overlay -->
+  <rect width="1920" height="1080" fill="url(#accentGlow)"/>
+
+  <!-- Grid Pattern Overlay -->
+  <rect width="1920" height="1080" fill="url(#gridPattern)" opacity="0.3"/>
+
+  <!-- Dot Pattern in Strategic Areas -->
+  <rect x="1200" y="200" width="720" height="400" fill="url(#dotPattern)" opacity="0.4"/>
+  <rect x="0" y="600" width="600" height="480" fill="url(#dotPattern)" opacity="0.2"/>
+
+  <!-- Abstract Geometric Elements -->
+
+  <!-- Large Abstract Shapes -->
+  <g opacity="0.15">
+    <!-- Top Right Circle -->
+    <circle cx="1500" cy="200" r="180" fill="url(#techGradient)" filter="url(#soften)"/>
+
+    <!-- Bottom Left Triangle -->
+    <polygon points="200,800 50,1000 400,950" fill="rgba(59,130,246,0.1)" filter="url(#soften)"/>
+
+    <!-- Center Right Hexagon -->
+    <polygon points="1600,500 1680,540 1680,620 1600,660 1520,620 1520,540"
+             fill="rgba(37,99,235,0.08)" stroke="rgba(37,99,235,0.2)" stroke-width="2"/>
+  </g>
+
+  <!-- Tech-inspired Floating Elements -->
+  <g opacity="0.6">
+    <!-- Circuit-like connections -->
+    <g stroke="rgba(37,99,235,0.3)" stroke-width="2" fill="none">
+      <path d="M300 300 Q400 280 500 300 T700 320"/>
+      <path d="M1200 600 Q1300 580 1400 600 T1600 620"/>
+      <path d="M800 200 Q900 180 1000 200 T1200 220"/>
+    </g>
+
+    <!-- Connection nodes -->
+    <g fill="rgba(37,99,235,0.5)">
+      <circle cx="300" cy="300" r="4"/>
+      <circle cx="500" cy="300" r="4"/>
+      <circle cx="700" cy="320" r="4"/>
+      <circle cx="1200" cy="600" r="4"/>
+      <circle cx="1400" cy="600" r="4"/>
+      <circle cx="1600" cy="620" r="4"/>
+      <circle cx="800" cy="200" r="4"/>
+      <circle cx="1000" cy="200" r="4"/>
+      <circle cx="1200" cy="220" r="4"/>
+    </g>
+  </g>
+
+  <!-- RFID Wave Animations -->
+  <g opacity="0.4">
+    <!-- RFID waves from top left -->
+    <g transform="translate(150, 150)">
+      <circle cx="0" cy="0" r="30" fill="none" stroke="rgba(37,99,235,0.3)" stroke-width="2">
+        <animate attributeName="r" values="30;60;30" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.3;0;0.3" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="45" fill="none" stroke="rgba(37,99,235,0.2)" stroke-width="1.5">
+        <animate attributeName="r" values="45;75;45" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+        <animate attributeName="opacity" values="0.2;0;0.2" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+      </circle>
+    </g>
+
+    <!-- RFID waves from bottom right -->
+    <g transform="translate(1700, 850)">
+      <circle cx="0" cy="0" r="40" fill="none" stroke="rgba(59,130,246,0.3)" stroke-width="2">
+        <animate attributeName="r" values="40;70;40" dur="5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.3;0;0.3" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="0" r="55" fill="none" stroke="rgba(59,130,246,0.2)" stroke-width="1.5">
+        <animate attributeName="r" values="55;85;55" dur="5s" repeatCount="indefinite" begin="0.7s"/>
+        <animate attributeName="opacity" values="0.2;0;0.2" dur="5s" repeatCount="indefinite" begin="0.7s"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Floating Particles -->
+  <g opacity="0.5">
+    <!-- Small floating elements -->
+    <circle cx="400" cy="150" r="3" fill="rgba(37,99,235,0.4)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; 10,-5; 0,0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1300" cy="400" r="2.5" fill="rgba(59,130,246,0.4)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; -8,3; 0,0" dur="8s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="600" cy="900" r="2" fill="rgba(37,99,235,0.3)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; 5,8; 0,0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1600" cy="300" r="2.5" fill="rgba(99,102,241,0.4)">
+      <animateTransform attributeName="transform" type="translate"
+                        values="0,0; -6,-4; 0,0" dur="9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Modern Abstract Elements -->
+  <g opacity="0.2">
+    <!-- Modern rectangles -->
+    <rect x="100" y="500" width="60" height="4" rx="2" fill="rgba(37,99,235,0.6)" transform="rotate(25 130 502)"/>
+    <rect x="1400" y="180" width="80" height="3" rx="1.5" fill="rgba(59,130,246,0.6)" transform="rotate(-15 1440 181.5)"/>
+    <rect x="800" y="850" width="50" height="5" rx="2.5" fill="rgba(37,99,235,0.5)" transform="rotate(45 825 852.5)"/>
+
+    <!-- Diamond shapes -->
+    <polygon points="350,600 365,585 380,600 365,615" fill="rgba(37,99,235,0.3)" transform="rotate(45 365 600)"/>
+    <polygon points="1500,750 1510,740 1520,750 1510,760" fill="rgba(59,130,246,0.3)" transform="rotate(30 1510 750)"/>
+  </g>
+
+  <!-- Subtle Brand Elements -->
+  <g opacity="0.1">
+    <!-- FindMate logo pattern -->
+    <g transform="translate(50, 50)">
+      <rect x="0" y="0" width="20" height="20" rx="3" fill="rgba(37,99,235,0.2)"/>
+      <circle cx="10" cy="10" r="4" fill="none" stroke="rgba(37,99,235,0.3)" stroke-width="1"/>
+    </g>
+
+    <g transform="translate(1800, 50)">
+      <rect x="0" y="0" width="20" height="20" rx="3" fill="rgba(37,99,235,0.2)"/>
+      <circle cx="10" cy="10" r="4" fill="none" stroke="rgba(37,99,235,0.3)" stroke-width="1"/>
+    </g>
+
+    <g transform="translate(50, 1000)">
+      <rect x="0" y="0" width="20" height="20" rx="3" fill="rgba(37,99,235,0.2)"/>
+      <circle cx="10" cy="10" r="4" fill="none" stroke="rgba(37,99,235,0.3)" stroke-width="1"/>
+    </g>
+
+    <g transform="translate(1800, 1000)">
+      <rect x="0" y="0" width="20" height="20" rx="3" fill="rgba(37,99,235,0.2)"/>
+      <circle cx="10" cy="10" r="4" fill="none" stroke="rgba(37,99,235,0.3)" stroke-width="1"/>
+    </g>
+  </g>
+
+  <!-- Light Rays -->
+  <g opacity="0.1">
+    <defs>
+      <linearGradient id="lightRay1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:rgba(37,99,235,0.3)"/>
+        <stop offset="100%" style="stop-color:rgba(37,99,235,0)"/>
+      </linearGradient>
+      <linearGradient id="lightRay2" x1="100%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:rgba(59,130,246,0.2)"/>
+        <stop offset="100%" style="stop-color:rgba(59,130,246,0)"/>
+      </linearGradient>
+    </defs>
+
+    <polygon points="0,0 400,0 0,300" fill="url(#lightRay1)"/>
+    <polygon points="1920,0 1520,0 1920,300" fill="url(#lightRay2)"/>
+  </g>
+
+  <!-- Content Area Highlight -->
+  <g opacity="0.05">
+    <!-- Main content area glow -->
+    <ellipse cx="960" cy="540" rx="600" ry="300" fill="rgba(37,99,235,0.1)" filter="url(#soften)"/>
+  </g>
+
+  <!-- Performance Optimization: Static elements for better rendering -->
+  <g opacity="0.3">
+    <!-- Static tech pattern -->
+    <g stroke="rgba(37,99,235,0.15)" stroke-width="1" fill="none">
+      <line x1="0" y1="540" x2="200" y2="540"/>
+      <line x1="1720" y1="540" x2="1920" y2="540"/>
+      <line x1="960" y1="0" x2="960" y2="100"/>
+      <line x1="960" y1="980" x2="960" y2="1080"/>
+    </g>
+  </g>
+</svg>

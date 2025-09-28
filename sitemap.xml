@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Main landing page -->
+    <url>
+        <loc>https://findmate.io/</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://findmate.io/images/product-hero-professional.svg</image:loc>
+            <image:title>FindMate RFID Tracker Device</image:title>
+            <image:caption>Revolutionary 13x13cm RFID cube tracker with smart app for instant gear verification</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://findmate.io/images/photographer-use-case.svg</image:loc>
+            <image:title>FindMate for Photographers</image:title>
+            <image:caption>Photography equipment tracking with RFID technology</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://findmate.io/images/contractor-use-case.svg</image:loc>
+            <image:title>FindMate for Contractors</image:title>
+            <image:caption>Professional tool tracking for contractors and technicians</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://findmate.io/images/traveler-use-case.svg</image:loc>
+            <image:title>FindMate for Travelers</image:title>
+            <image:caption>Travel essentials tracking for peace of mind</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://findmate.io/images/student-use-case.svg</image:loc>
+            <image:title>FindMate for Students</image:title>
+            <image:caption>Academic supplies and equipment tracking</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://findmate.io/images/outdoor-use-case.svg</image:loc>
+            <image:title>FindMate for Outdoor Activities</image:title>
+            <image:caption>Outdoor and sports gear tracking for adventures</image:caption>
+        </image:image>
+    </url>
+
+    <!-- Additional pages (if they exist) -->
+    <url>
+        <loc>https://findmate.io/privacy</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://findmate.io/terms</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <url>
+        <loc>https://findmate.io/contact</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>

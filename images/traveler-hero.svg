@@ -1,0 +1,214 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="travelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c4a6e"/>
+      <stop offset="30%" style="stop-color:#0369a1"/>
+      <stop offset="70%" style="stop-color:#0284c7"/>
+      <stop offset="100%" style="stop-color:#0ea5e9"/>
+    </linearGradient>
+
+    <radialGradient id="sunlight" cx="80%" cy="20%" r="60%">
+      <stop offset="0%" style="stop-color:rgba(251,191,36,0.4)"/>
+      <stop offset="50%" style="stop-color:rgba(251,191,36,0.2)"/>
+      <stop offset="100%" style="stop-color:rgba(251,191,36,0)"/>
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="premium" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="luggage" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="4" dy="8" stdDeviation="6" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#travelGradient)"/>
+  <rect width="800" height="600" fill="url(#sunlight)"/>
+
+  <!-- Airport/Travel Terminal Silhouette -->
+  <g opacity="0.1">
+    <rect x="0" y="400" width="800" height="200" fill="url(#travelGradient)"/>
+    <ellipse cx="200" cy="450" rx="50" ry="100" fill="#0284c7"/>
+    <ellipse cx="600" cy="420" rx="80" ry="120" fill="#0284c7"/>
+  </g>
+
+  <!-- Suitcase -->
+  <g transform="translate(100, 250)" filter="url(#luggage)">
+    <!-- Main body -->
+    <rect x="0" y="20" width="120" height="180" rx="12" fill="#1e293b" stroke="#334155" stroke-width="3"/>
+    <rect x="5" y="25" width="110" height="170" rx="10" fill="#0f172a"/>
+
+    <!-- Handle -->
+    <rect x="45" y="0" width="30" height="15" rx="7" fill="#64748b" stroke="#475569"/>
+    <rect x="50" y="5" width="20" height="8" rx="4" fill="#334155"/>
+
+    <!-- Wheels -->
+    <circle cx="20" cy="210" r="8" fill="#374151" stroke="#1f2937"/>
+    <circle cx="100" cy="210" r="8" fill="#374151" stroke="#1f2937"/>
+
+    <!-- Zipper -->
+    <rect x="10" y="40" width="100" height="4" rx="2" fill="#64748b"/>
+    <rect x="10" y="160" width="100" height="4" rx="2" fill="#64748b"/>
+
+    <!-- Travel stickers -->
+    <circle cx="30" cy="80" r="12" fill="#dc2626" stroke="#b91c1c"/>
+    <text x="30" y="84" text-anchor="middle" font-family="Arial" font-size="8" font-weight="bold" fill="#fff">NYC</text>
+
+    <rect x="70" y="100" width="25" height="15" rx="3" fill="#16a34a" stroke="#15803d"/>
+    <text x="82.5" y="110" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="#fff">PARIS</text>
+
+    <polygon points="40,140 55,140 47.5,125" fill="#fbbf24" stroke="#f59e0b"/>
+    <text x="47.5" y="150" text-anchor="middle" font-family="Arial" font-size="5" font-weight="bold" fill="#000">TOKYO</text>
+
+    <!-- RFID Tag on suitcase -->
+    <rect x="90" y="5" width="15" height="10" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="97.5" cy="10" r="2.5" fill="none" stroke="#0ea5e9" stroke-width="1"/>
+  </g>
+
+  <!-- Passport and Documents -->
+  <g transform="translate(280, 200)" filter="url(#luggage)">
+    <!-- Passport -->
+    <rect x="0" y="0" width="35" height="50" rx="3" fill="#dc2626" stroke="#b91c1c" stroke-width="2"/>
+    <rect x="3" y="3" width="29" height="12" rx="1" fill="#fbbf24"/>
+    <text x="17.5" y="10" text-anchor="middle" font-family="Arial" font-size="6" font-weight="bold" fill="#000">PASSPORT</text>
+    <text x="17.5" y="25" text-anchor="middle" font-family="Arial" font-size="8" fill="#fff">🛂</text>
+
+    <!-- Boarding passes -->
+    <rect x="45" y="5" width="60" height="20" rx="3" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="47" y="7" width="25" height="6" rx="1" fill="#0ea5e9"/>
+    <text x="59.5" y="11" text-anchor="middle" font-family="Arial" font-size="4" font-weight="bold" fill="#fff">GATE A12</text>
+    <text x="85" y="18" text-anchor="middle" font-family="Arial" font-size="6" fill="#000">✈️ LAX-JFK</text>
+
+    <rect x="45" y="30" width="60" height="20" rx="3" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="47" y="32" width="25" height="6" rx="1" fill="#16a34a"/>
+    <text x="59.5" y="36" text-anchor="middle" font-family="Arial" font-size="4" font-weight="bold" fill="#fff">GATE B7</text>
+    <text x="85" y="43" text-anchor="middle" font-family="Arial" font-size="6" fill="#000">✈️ JFK-CDG</text>
+
+    <!-- RFID Tag on documents -->
+    <rect x="50" y="-5" width="12" height="8" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="56" cy="-1" r="2" fill="none" stroke="#0ea5e9" stroke-width="1"/>
+  </g>
+
+  <!-- Travel Electronics -->
+  <g transform="translate(450, 180)" filter="url(#luggage)">
+    <!-- Laptop -->
+    <rect x="0" y="0" width="80" height="60" rx="4" fill="#374151" stroke="#1f2937" stroke-width="2"/>
+    <rect x="3" y="3" width="74" height="45" rx="2" fill="#000000"/>
+    <rect x="8" y="8" width="64" height="35" rx="1" fill="#1e40af"/>
+
+    <!-- Chargers and cables -->
+    <g transform="translate(90, 10)">
+      <!-- Power adapter -->
+      <rect x="0" y="0" width="25" height="15" rx="3" fill="#ffffff" stroke="#e5e7eb"/>
+      <rect x="5" y="3" width="6" height="4" rx="1" fill="#374151"/>
+      <rect x="14" y="3" width="6" height="4" rx="1" fill="#374151"/>
+
+      <!-- Cables -->
+      <path d="M25 7 Q35 2 45 7 T65 12" stroke="#374151" stroke-width="3" fill="none"/>
+      <path d="M25 12 Q35 17 45 12 T65 7" stroke="#374151" stroke-width="3" fill="none"/>
+    </g>
+
+    <!-- Power bank -->
+    <rect x="15" y="70" width="40" height="20" rx="4" fill="#1e293b" stroke="#334155"/>
+    <rect x="18" y="73" width="12" height="6" rx="1" fill="#22c55e"/>
+    <circle cx="45" cy="76" r="2" fill="#64748b"/>
+
+    <!-- RFID Tags -->
+    <rect x="60" y="-8" width="12" height="8" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="66" cy="-4" r="2" fill="none" stroke="#0ea5e9" stroke-width="1"/>
+
+    <rect x="35" y="95" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="40" cy="98" r="1.5" fill="none" stroke="#0ea5e9" stroke-width="0.8"/>
+  </g>
+
+  <!-- Travel Accessories -->
+  <g transform="translate(150, 400)" filter="url(#luggage)">
+    <!-- Travel pillow -->
+    <path d="M0 20 Q0 0 20 0 Q40 0 40 20 Q35 25 30 25 Q10 25 5 25 Q0 25 0 20" fill="#6366f1" stroke="#4f46e5"/>
+
+    <!-- Eye mask -->
+    <ellipse cx="70" cy="15" rx="20" ry="8" fill="#1f2937" stroke="#374151"/>
+    <ellipse cx="65" cy="15" rx="6" ry="4" fill="#000000"/>
+    <ellipse cx="75" cy="15" rx="6" ry="4" fill="#000000"/>
+
+    <!-- Travel bottle -->
+    <rect x="110" y="0" width="12" height="35" rx="3" fill="#0ea5e9" stroke="#0284c7"/>
+    <rect x="112" y="2" width="8" height="25" rx="2" fill="rgba(14, 165, 233, 0.3)"/>
+    <circle cx="116" cy="-2" r="4" fill="#64748b"/>
+
+    <!-- Adapter -->
+    <rect x="140" y="10" width="20" height="15" rx="3" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="145" y="13" width="4" height="3" rx="1" fill="#374151"/>
+    <rect x="151" y="13" width="4" height="3" rx="1" fill="#374151"/>
+
+    <!-- RFID Tags -->
+    <rect x="15" y="35" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="20" cy="38" r="1.5" fill="none" stroke="#0ea5e9" stroke-width="0.8"/>
+
+    <rect x="145" y="0" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="150" cy="3" r="1.5" fill="none" stroke="#0ea5e9" stroke-width="0.8"/>
+  </g>
+
+  <!-- FindMate Scanner -->
+  <g transform="translate(580, 350)" filter="url(#premium)">
+    <!-- Scanner cube -->
+    <rect x="0" y="20" width="100" height="100" rx="12" fill="url(#travelGradient)" stroke="#0ea5e9" stroke-width="4"/>
+    <rect x="5" y="25" width="90" height="90" rx="10" fill="rgba(14, 165, 233, 0.15)"/>
+
+    <!-- Logo/Brand -->
+    <circle cx="50" cy="70" r="18" fill="none" stroke="#0ea5e9" stroke-width="3"/>
+    <text x="50" y="105" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#0ea5e9">FindMate</text>
+
+    <!-- RFID Scanning Waves -->
+    <g opacity="0.8">
+      <circle cx="50" cy="70" r="28" fill="none" stroke="#0ea5e9" stroke-width="3" opacity="0.6">
+        <animate attributeName="r" values="28;40;28" dur="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;0;0.6" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="50" cy="70" r="35" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.4">
+        <animate attributeName="r" values="35;50;35" dur="3.5s" repeatCount="indefinite" begin="0.6s"/>
+        <animate attributeName="opacity" values="0.4;0;0.4" dur="3.5s" repeatCount="indefinite" begin="0.6s"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Airplane silhouettes -->
+  <g opacity="0.15">
+    <g transform="translate(200, 80)">
+      <ellipse cx="0" cy="0" rx="30" ry="4" fill="#38bdf8" transform="rotate(15)"/>
+      <ellipse cx="0" cy="0" rx="8" ry="12" fill="#38bdf8" transform="rotate(15)"/>
+    </g>
+
+    <g transform="translate(650, 120)">
+      <ellipse cx="0" cy="0" rx="25" ry="3" fill="#0ea5e9" transform="rotate(-20)"/>
+      <ellipse cx="0" cy="0" rx="6" ry="10" fill="#0ea5e9" transform="rotate(-20)"/>
+    </g>
+  </g>
+
+  <!-- Professional Badge -->
+  <g transform="translate(50, 100)" opacity="0.9">
+    <rect x="0" y="0" width="170" height="65" rx="8" fill="rgba(0,0,0,0.4)" stroke="rgba(14, 165, 233, 0.4)"/>
+    <text x="85" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#0ea5e9">BUSINESS TRAVEL</text>
+    <text x="85" y="40" text-anchor="middle" font-family="Arial" font-size="10" fill="#38bdf8">ESSENTIAL GEAR</text>
+    <text x="85" y="52" text-anchor="middle" font-family="Arial" font-size="8" fill="#7dd3fc">NEVER FORGET ANYTHING</text>
+  </g>
+
+  <!-- Floating travel elements -->
+  <g opacity="0.3">
+    <text x="300" y="50" font-family="Arial" font-size="20" fill="#0ea5e9">✈️</text>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 20,-10; 0,0" dur="12s" repeatCount="indefinite"/>
+
+    <text x="600" y="180" font-family="Arial" font-size="16" fill="#38bdf8">🌍</text>
+    <animateTransform attributeName="transform" type="translate" values="0,0; -15,8; 0,0" dur="10s" repeatCount="indefinite"/>
+
+    <text x="100" y="520" font-family="Arial" font-size="18" fill="#0ea5e9">🧳</text>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 12,-6; 0,0" dur="8s" repeatCount="indefinite"/>
+  </g>
+</svg>

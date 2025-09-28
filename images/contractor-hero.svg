@@ -1,0 +1,221 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="constructionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="30%" style="stop-color:#1e293b"/>
+      <stop offset="70%" style="stop-color:#334155"/>
+      <stop offset="100%" style="stop-color:#475569"/>
+    </linearGradient>
+
+    <radialGradient id="workLight" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(251,191,36,0.3)"/>
+      <stop offset="50%" style="stop-color:rgba(251,191,36,0.1)"/>
+      <stop offset="100%" style="stop-color:rgba(251,191,36,0)"/>
+    </radialGradient>
+
+    <!-- Filters -->
+    <filter id="metallic" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="heavyShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="6" dy="10" stdDeviation="8" flood-color="rgba(0,0,0,0.4)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#constructionGradient)"/>
+  <rect width="800" height="600" fill="url(#workLight)"/>
+
+  <!-- Construction Site Elements -->
+  <g opacity="0.2">
+    <rect x="50" y="450" width="700" height="4" fill="#fbbf24"/>
+    <rect x="0" y="500" width="800" height="100" fill="url(#constructionGradient)"/>
+  </g>
+
+  <!-- Tool Box -->
+  <g transform="translate(50, 300)" filter="url(#heavyShadow)">
+    <rect x="0" y="20" width="200" height="120" rx="8" fill="#dc2626" stroke="#b91c1c" stroke-width="3"/>
+    <rect x="5" y="25" width="190" height="110" rx="6" fill="#b91c1c"/>
+
+    <!-- Tool box handle -->
+    <rect x="80" y="10" width="40" height="12" rx="6" fill="#374151" stroke="#1f2937"/>
+
+    <!-- Tool box latches -->
+    <rect x="20" y="15" width="12" height="8" rx="2" fill="#374151"/>
+    <rect x="168" y="15" width="12" height="8" rx="2" fill="#374151"/>
+
+    <!-- RFID Tag on toolbox -->
+    <rect x="160" y="5" width="15" height="10" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="167.5" cy="10" r="2.5" fill="none" stroke="#2563eb" stroke-width="1"/>
+  </g>
+
+  <!-- Power Drill -->
+  <g transform="translate(300, 250)" filter="url(#heavyShadow)">
+    <!-- Drill body -->
+    <rect x="0" y="20" width="80" height="40" rx="8" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="5" y="25" width="70" height="30" rx="6" fill="#f59e0b"/>
+
+    <!-- Drill chuck -->
+    <rect x="80" y="32" width="30" height="16" rx="2" fill="#374151"/>
+    <circle cx="95" cy="40" r="6" fill="#1f2937" stroke="#374151"/>
+
+    <!-- Drill bit -->
+    <rect x="110" y="38" width="25" height="4" rx="1" fill="#9ca3af"/>
+
+    <!-- Battery pack -->
+    <rect x="-10" y="35" width="20" height="25" rx="3" fill="#1f2937" stroke="#374151"/>
+    <rect x="-8" y="37" width="16" height="8" rx="1" fill="#22c55e"/>
+
+    <!-- Trigger -->
+    <rect x="25" y="60" width="20" height="15" rx="7" fill="#dc2626"/>
+
+    <!-- RFID Tag on drill -->
+    <rect x="35" y="10" width="12" height="8" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="41" cy="14" r="2" fill="none" stroke="#2563eb" stroke-width="1"/>
+  </g>
+
+  <!-- Socket Set -->
+  <g transform="translate(450, 320)" filter="url(#heavyShadow)">
+    <!-- Socket rail -->
+    <rect x="0" y="0" width="120" height="20" rx="4" fill="#374151" stroke="#1f2937" stroke-width="2"/>
+
+    <!-- Individual sockets -->
+    <circle cx="15" cy="10" r="6" fill="#6b7280" stroke="#374151"/>
+    <text x="15" y="13" text-anchor="middle" font-family="Arial" font-size="6" fill="#fff">10</text>
+
+    <circle cx="35" cy="10" r="7" fill="#6b7280" stroke="#374151"/>
+    <text x="35" y="13" text-anchor="middle" font-family="Arial" font-size="6" fill="#fff">12</text>
+
+    <circle cx="57" cy="10" r="8" fill="#6b7280" stroke="#374151"/>
+    <text x="57" y="13" text-anchor="middle" font-family="Arial" font-size="6" fill="#fff">14</text>
+
+    <circle cx="81" cy="10" r="9" fill="#6b7280" stroke="#374151"/>
+    <text x="81" y="13" text-anchor="middle" font-family="Arial" font-size="6" fill="#fff">17</text>
+
+    <circle cx="105" cy="10" r="10" fill="#6b7280" stroke="#374151"/>
+    <text x="105" y="13" text-anchor="middle" font-family="Arial" font-size="6" fill="#fff">19</text>
+
+    <!-- RFID Tag on socket set -->
+    <rect x="50" y="-10" width="12" height="8" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="56" cy="-6" r="2" fill="none" stroke="#2563eb" stroke-width="1"/>
+  </g>
+
+  <!-- Measuring Tools -->
+  <g transform="translate(120, 180)" filter="url(#heavyShadow)">
+    <!-- Tape measure -->
+    <circle cx="30" cy="30" r="25" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+    <circle cx="30" cy="30" r="20" fill="#f59e0b"/>
+    <rect x="55" y="28" width="40" height="4" rx="2" fill="#fbbf24" stroke="#f59e0b"/>
+
+    <!-- Level -->
+    <rect x="80" y="10" width="100" height="12" rx="6" fill="#22c55e" stroke="#16a34a" stroke-width="2"/>
+    <circle cx="110" cy="16" r="3" fill="#fbbf24"/>
+    <circle cx="130" cy="16" r="3" fill="#fbbf24"/>
+    <circle cx="150" cy="16" r="3" fill="#fbbf24"/>
+
+    <!-- Square -->
+    <g transform="translate(200, 20)">
+      <rect x="0" y="0" width="60" height="8" rx="2" fill="#374151"/>
+      <rect x="0" y="0" width="8" height="40" rx="2" fill="#374151"/>
+      <!-- Measurements -->
+      <line x1="10" y1="4" x2="50" y2="4" stroke="#fbbf24" stroke-width="1"/>
+    </g>
+
+    <!-- RFID Tags -->
+    <rect x="15" y="5" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="20" cy="8" r="1.5" fill="none" stroke="#2563eb" stroke-width="0.8"/>
+
+    <rect x="160" y="-5" width="10" height="6" rx="1" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="165" cy="-2" r="1.5" fill="none" stroke="#2563eb" stroke-width="0.8"/>
+  </g>
+
+  <!-- Safety Equipment -->
+  <g transform="translate(600, 200)" filter="url(#heavyShadow)">
+    <!-- Hard hat -->
+    <ellipse cx="50" cy="40" rx="35" ry="25" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
+    <ellipse cx="50" cy="35" rx="30" ry="20" fill="#f59e0b"/>
+    <rect x="35" y="25" width="30" height="6" rx="3" fill="#dc2626"/>
+
+    <!-- Safety glasses -->
+    <g transform="translate(20, 80)">
+      <ellipse cx="15" cy="8" rx="12" ry="6" fill="rgba(59, 130, 246, 0.3)" stroke="#3b82f6"/>
+      <ellipse cx="45" cy="8" rx="12" ry="6" fill="rgba(59, 130, 246, 0.3)" stroke="#3b82f6"/>
+      <rect x="27" y="6" width="6" height="4" rx="2" fill="#374151"/>
+    </g>
+
+    <!-- Work gloves -->
+    <g transform="translate(90, 70)">
+      <ellipse cx="15" cy="15" rx="12" ry="18" fill="#374151" stroke="#1f2937"/>
+      <ellipse cx="35" cy="15" rx="12" ry="18" fill="#374151" stroke="#1f2937"/>
+    </g>
+
+    <!-- RFID Tag on safety equipment -->
+    <rect x="70" y="10" width="12" height="8" rx="2" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="76" cy="14" r="2" fill="none" stroke="#2563eb" stroke-width="1"/>
+  </g>
+
+  <!-- FindMate Scanner -->
+  <g transform="translate(350, 400)" filter="url(#metallic)">
+    <!-- Scanner cube -->
+    <rect x="0" y="20" width="100" height="100" rx="10" fill="url(#constructionGradient)" stroke="#fbbf24" stroke-width="4"/>
+    <rect x="5" y="25" width="90" height="90" rx="8" fill="rgba(251, 191, 36, 0.1)"/>
+
+    <!-- Logo/Brand -->
+    <circle cx="50" cy="70" r="20" fill="none" stroke="#fbbf24" stroke-width="3"/>
+    <text x="50" y="105" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#fbbf24">FindMate</text>
+
+    <!-- RFID Scanning Waves -->
+    <g opacity="0.7">
+      <circle cx="50" cy="70" r="30" fill="none" stroke="#fbbf24" stroke-width="3" opacity="0.5">
+        <animate attributeName="r" values="30;45;30" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0;0.5" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="50" cy="70" r="40" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.3">
+        <animate attributeName="r" values="40;55;40" dur="4s" repeatCount="indefinite" begin="0.7s"/>
+        <animate attributeName="opacity" values="0.3;0;0.3" dur="4s" repeatCount="indefinite" begin="0.7s"/>
+      </animate>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Industrial Background Elements -->
+  <g opacity="0.15">
+    <!-- Crane silhouette -->
+    <g transform="translate(650, 50)">
+      <rect x="0" y="0" width="8" height="300" fill="#fbbf24"/>
+      <rect x="-30" y="80" width="80" height="6" fill="#fbbf24"/>
+      <rect x="50" y="86" width="4" height="50" fill="#fbbf24"/>
+    </g>
+
+    <!-- Construction beams -->
+    <rect x="0" y="120" width="200" height="6" fill="#fbbf24" transform="rotate(15)"/>
+    <rect x="500" y="400" width="150" height="6" fill="#fbbf24" transform="rotate(-10)"/>
+  </g>
+
+  <!-- Professional Badge -->
+  <g transform="translate(580, 450)" opacity="0.9">
+    <rect x="0" y="0" width="180" height="70" rx="10" fill="rgba(0,0,0,0.5)" stroke="rgba(251, 191, 36, 0.4)"/>
+    <text x="90" y="25" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#fbbf24">CONTRACTOR</text>
+    <text x="90" y="40" text-anchor="middle" font-family="Arial" font-size="11" fill="#f59e0b">PROFESSIONAL TOOLS</text>
+    <text x="90" y="55" text-anchor="middle" font-family="Arial" font-size="9" fill="#fde047">RFID ORGANIZATION</text>
+  </g>
+
+  <!-- Floating sparks/particles -->
+  <g opacity="0.4">
+    <circle cx="150" cy="120" r="2" fill="#fbbf24">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 15,-8; 0,0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="180" r="1.5" fill="#f59e0b">
+      <animateTransform attributeName="transform" type="translate" values="0,0; -10,12; 0,0" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="350" r="2.5" fill="#fbbf24">
+      <animateTransform attributeName="transform" type="translate" values="0,0; 8,-15; 0,0" dur="10s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

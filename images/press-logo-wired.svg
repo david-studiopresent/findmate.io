@@ -1,0 +1,32 @@
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wiredRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff0040"/>
+      <stop offset="100%" style="stop-color:#cc0033"/>
+    </linearGradient>
+  </defs>
+
+  <!-- WIRED Background -->
+  <rect width="200" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- WIRED Logo -->
+  <g transform="translate(40, 25)">
+    <!-- W -->
+    <path d="M0 0 L2 15 L4 0 L6 15 L8 0" stroke="url(#wiredRed)" stroke-width="2.5" fill="none"/>
+
+    <!-- I -->
+    <rect x="12" y="0" width="2.5" height="15" fill="url(#wiredRed)"/>
+
+    <!-- R -->
+    <path d="M18 0 L18 15 M18 0 L24 0 Q26 0 26 4 Q26 8 24 8 L18 8 M24 8 L26 15" stroke="url(#wiredRed)" stroke-width="2.5" fill="none"/>
+
+    <!-- E -->
+    <path d="M30 0 L30 15 M30 0 L36 0 M30 7.5 L34 7.5 M30 15 L36 15" stroke="url(#wiredRed)" stroke-width="2.5" fill="none"/>
+
+    <!-- D -->
+    <path d="M40 0 L40 15 M40 0 Q46 0 46 7.5 Q46 15 40 15" stroke="url(#wiredRed)" stroke-width="2.5" fill="none"/>
+  </g>
+
+  <!-- As Featured In -->
+  <text x="100" y="65" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#6b7280">As Featured In</text>
+</svg>

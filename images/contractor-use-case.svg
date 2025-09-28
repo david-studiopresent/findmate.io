@@ -1,0 +1,101 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa"/>
+      <stop offset="100%" style="stop-color:#ffffff"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="rgba(0,0,0,0.1)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg2)"/>
+
+  <!-- Hard Hat -->
+  <g transform="translate(50, 80)" filter="url(#shadow2)">
+    <ellipse cx="25" cy="25" rx="25" ry="15" fill="#f59e0b"/>
+    <rect x="15" y="15" width="20" height="8" rx="2" fill="#d97706"/>
+    <rect x="5" y="35" width="40" height="5" rx="2" fill="#92400e"/>
+
+    <!-- RFID tag on hard hat -->
+    <rect x="35" y="10" width="8" height="5" rx="1" fill="#ffffff" stroke="#d1d5db"/>
+    <circle cx="39" cy="12.5" r="1" fill="none" stroke="#2563eb" stroke-width="0.5"/>
+  </g>
+
+  <!-- Drill -->
+  <g transform="translate(150, 120)" filter="url(#shadow2)">
+    <rect x="0" y="0" width="50" height="20" rx="10" fill="#1f2937"/>
+    <rect x="45" y="8" width="15" height="4" rx="2" fill="#4a5568"/>
+    <circle cx="55" cy="10" r="3" fill="#718096"/>
+    <rect x="5" y="5" width="8" height="10" rx="1" fill="#ef4444"/>
+
+    <!-- RFID tag on drill -->
+    <rect x="20" y="-3" width="8" height="5" rx="1" fill="#ffffff" stroke="#d1d5db"/>
+    <circle cx="24" cy="0" r="1" fill="none" stroke="#2563eb" stroke-width="0.5"/>
+  </g>
+
+  <!-- Hammer -->
+  <g transform="translate(250, 100)" filter="url(#shadow2)">
+    <rect x="0" y="20" width="40" height="6" rx="3" fill="#8b4513"/>
+    <rect x="35" y="10" width="15" height="26" rx="3" fill="#4a5568"/>
+
+    <!-- RFID tag on hammer -->
+    <rect x="15" y="15" width="8" height="5" rx="1" fill="#ffffff" stroke="#d1d5db"/>
+    <circle cx="19" cy="17.5" r="1" fill="none" stroke="#2563eb" stroke-width="0.5"/>
+  </g>
+
+  <!-- Measuring Tape -->
+  <g transform="translate(320, 140)" filter="url(#shadow2)">
+    <rect x="0" y="0" width="25" height="20" rx="3" fill="#f59e0b"/>
+    <rect x="2" y="2" width="21" height="16" rx="2" fill="#d97706"/>
+    <rect x="20" y="8" width="10" height="4" rx="1" fill="#4a5568"/>
+
+    <!-- RFID tag on measuring tape -->
+    <rect x="10" y="-2" width="8" height="5" rx="1" fill="#ffffff" stroke="#d1d5db"/>
+    <circle cx="14" cy="0.5" r="1" fill="none" stroke="#2563eb" stroke-width="0.5"/>
+  </g>
+
+  <!-- Screwdriver Set -->
+  <g transform="translate(80, 180)" filter="url(#shadow2)">
+    <rect x="0" y="0" width="30" height="8" rx="4" fill="#ef4444"/>
+    <rect x="25" y="2" width="20" height="4" rx="1" fill="#4a5568"/>
+    <rect x="0" y="12" width="30" height="8" rx="4" fill="#10b981"/>
+    <rect x="25" y="14" width="20" height="4" rx="1" fill="#4a5568"/>
+
+    <!-- RFID tag on screwdriver set -->
+    <rect x="10" y="25" width="8" height="5" rx="1" fill="#ffffff" stroke="#d1d5db"/>
+    <circle cx="14" cy="27.5" r="1" fill="none" stroke="#2563eb" stroke-width="0.5"/>
+  </g>
+
+  <!-- Level Tool -->
+  <g transform="translate(200, 180)" filter="url(#shadow2)">
+    <rect x="0" y="0" width="60" height="8" rx="4" fill="#f59e0b"/>
+    <circle cx="30" cy="4" r="2" fill="#10b981"/>
+    <rect x="25" y="1" width="10" height="6" rx="1" fill="#ffffff" stroke="#d1d5db"/>
+
+    <!-- RFID tag on level -->
+    <rect x="40" y="-2" width="8" height="5" rx="1" fill="#ffffff" stroke="#d1d5db"/>
+    <circle cx="44" cy="0.5" r="1" fill="none" stroke="#2563eb" stroke-width="0.5"/>
+  </g>
+
+  <!-- Safety Glasses -->
+  <g transform="translate(120, 80)" filter="url(#shadow2)">
+    <ellipse cx="12" cy="8" rx="12" ry="8" fill="none" stroke="#4a5568" stroke-width="3"/>
+    <ellipse cx="28" cy="8" rx="12" ry="8" fill="none" stroke="#4a5568" stroke-width="3"/>
+    <path d="M24 8 L16 8" stroke="#4a5568" stroke-width="2"/>
+
+    <!-- RFID tag on glasses -->
+    <rect x="30" y="2" width="8" height="5" rx="1" fill="#ffffff" stroke="#d1d5db"/>
+    <circle cx="34" cy="4.5" r="1" fill="none" stroke="#2563eb" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="200" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" font-weight="600" fill="#1f2937">Contractor Tool Kit</text>
+
+  <!-- Subtitle -->
+  <text x="200" y="60" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#6b7280">Safety Gear • Power Tools • Hand Tools • Measuring Equipment</text>
+
+  <!-- RFID indicator -->
+  <text x="200" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#2563eb">Professional tools tracked for job site efficiency</text>
+</svg>

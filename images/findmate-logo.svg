@@ -1,0 +1,60 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+
+    <filter id="logoGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Logo Icon -->
+  <g transform="translate(10, 10)">
+    <!-- Outer cube frame -->
+    <rect x="0" y="0" width="40" height="40" rx="8" fill="none" stroke="url(#logoGradient)" stroke-width="3"/>
+
+    <!-- Inner RFID symbol -->
+    <circle cx="20" cy="20" r="8" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
+    <circle cx="20" cy="20" r="12" fill="none" stroke="url(#logoGradient)" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="20" cy="20" r="16" fill="none" stroke="url(#logoGradient)" stroke-width="1" opacity="0.3"/>
+
+    <!-- Central dot -->
+    <circle cx="20" cy="20" r="2" fill="url(#logoGradient)"/>
+
+    <!-- Corner elements -->
+    <rect x="2" y="2" width="4" height="4" rx="1" fill="url(#logoGradient)" opacity="0.8"/>
+    <rect x="34" y="2" width="4" height="4" rx="1" fill="url(#logoGradient)" opacity="0.8"/>
+    <rect x="2" y="34" width="4" height="4" rx="1" fill="url(#logoGradient)" opacity="0.8"/>
+    <rect x="34" y="34" width="4" height="4" rx="1" fill="url(#logoGradient)" opacity="0.8"/>
+  </g>
+
+  <!-- FindMate Text -->
+  <g transform="translate(60, 15)">
+    <!-- Find -->
+    <text x="0" y="20" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="url(#logoGradient)">Find</text>
+
+    <!-- Mate -->
+    <text x="52" y="20" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="400" fill="#1f2937">Mate</text>
+
+    <!-- Tagline -->
+    <text x="0" y="35" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="500" fill="#6b7280" letter-spacing="0.5px">RFID TRACKING TECHNOLOGY</text>
+  </g>
+
+  <!-- Animated RFID waves -->
+  <g transform="translate(30, 30)" opacity="0.4">
+    <circle cx="0" cy="0" r="6" fill="none" stroke="#3b82f6" stroke-width="1">
+      <animate attributeName="r" values="6;12;6" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="8" fill="none" stroke="#60a5fa" stroke-width="0.5">
+      <animate attributeName="r" values="8;16;8" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+  </g>
+</svg>

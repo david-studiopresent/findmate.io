@@ -1,0 +1,28 @@
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tcGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d084"/>
+      <stop offset="100%" style="stop-color:#00a86b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- TechCrunch Background -->
+  <rect width="200" height="80" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- TechCrunch Logo -->
+  <g transform="translate(20, 20)">
+    <!-- T -->
+    <rect x="0" y="0" width="12" height="3" fill="url(#tcGreen)"/>
+    <rect x="4.5" y="0" width="3" height="25" fill="url(#tcGreen)"/>
+
+    <!-- C -->
+    <path d="M15 12.5 Q15 5 22 5 Q25 5 25 8" stroke="url(#tcGreen)" stroke-width="3" fill="none"/>
+    <path d="M15 12.5 Q15 20 22 20 Q25 20 25 17" stroke="url(#tcGreen)" stroke-width="3" fill="none"/>
+
+    <!-- Text -->
+    <text x="35" y="18" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#1f2937">TechCrunch</text>
+  </g>
+
+  <!-- As Featured In -->
+  <text x="100" y="65" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#6b7280">As Featured In</text>
+</svg>
