@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="TheTrackTag">
+    <meta name="theme-color" content="#111827">
+    <title>TheTrackTag - Smart Gear Tracker</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4ADE80',
+                        secondary: '#2563EB',
+                        accent: '#FACC15',
+                        danger: '#EF4444',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        * {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+        }
+
+        body {
+            overscroll-behavior: none;
+        }
+
+        .slide-animation {
+            animation: slideLeft 2s linear;
+        }
+
+        @keyframes slideLeft {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .scale-in {
+            animation: scaleIn 0.4s ease-out;
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-50 font-sans min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-gray-800 border-b border-gray-700 sticky top-0 z-50">
+        <div class="flex items-center justify-between px-4 py-3">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="App.navigate('home')">
+                <img src="logo.png" alt="Logo" class="h-8 w-8">
+                <h1 class="text-lg font-bold">TheTrackTag</h1>
+            </div>
+            <div class="flex items-center gap-3">
+                <button id="bleButton" class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors text-sm">
+                    <div id="bleIndicator" class="w-2 h-2 rounded-full bg-gray-500"></div>
+                    <span id="bleStatus">RFID</span>
+                </button>
+                <button id="hamburger" class="w-10 h-10 flex flex-col items-center justify-center gap-1.5 active:scale-95 transition-transform">
+                    <span class="w-6 h-0.5 bg-gray-50 rounded"></span>
+                    <span class="w-6 h-0.5 bg-gray-50 rounded"></span>
+                    <span class="w-6 h-0.5 bg-gray-50 rounded"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Overlay -->
+    <div id="menu" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div class="absolute right-0 top-0 bottom-0 w-64 bg-gray-800 shadow-xl">
+            <div class="p-4">
+                <button id="closeMenu" class="w-10 h-10 flex items-center justify-center ml-auto text-gray-400 hover:text-gray-50">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <nav class="mt-8 space-y-2">
+                    <a href="#" class="block px-4 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                        <span class="font-medium">Profile Settings</span>
+                        <p class="text-sm text-gray-400 mt-1">(Coming soon)</p>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 overflow-y-auto">
+        <div class="min-h-screen p-4 flex items-center justify-center">
+            <div class="bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full p-6 scale-in">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-xl font-bold text-accent">🔧 Admin Panel</h2>
+                    <button id="closeAdmin" class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-50">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Select Set</label>
+                        <select id="adminSetSelect" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-gray-50 focus:ring-2 focus:ring-accent focus:border-transparent">
+                            <option value="">-- Choose a set --</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Trigger on Check Number</label>
+                        <input type="number" id="adminCheckNumber" placeholder="e.g., 1, 2, 3..." class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-gray-50 focus:ring-2 focus:ring-accent focus:border-transparent" min="1">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-300 mb-2">Mark Missing Items</label>
+                        <div id="adminItemsList" class="space-y-2 max-h-64 overflow-y-auto bg-gray-900 rounded-lg p-3">
+                            <p class="text-gray-500 text-sm">Select a set to see items</p>
+                        </div>
+                    </div>
+
+                    <button id="saveAdminRule" class="w-full bg-accent hover:bg-yellow-500 text-gray-900 font-semibold py-3 rounded-lg transition-colors mb-3">
+                        Save Simulation Rule
+                    </button>
+
+                    <button id="clearStorage" class="w-full bg-danger hover:bg-red-600 text-white font-semibold py-3 rounded-lg transition-colors">
+                        🗑️ Clear All Data
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="app" class="min-h-[calc(100vh-8rem)] pb-8">
+        <!-- Views will be injected here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-4 px-4 text-center text-sm text-gray-400 mt-auto">
+        <p>&copy; 2025 FindMate.io - All rights reserved</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="storage.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
