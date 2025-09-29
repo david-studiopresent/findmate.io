@@ -139,7 +139,7 @@ const Storage = {
 
     // Load dummy data
     loadDummyData() {
-        const dummySet = {
+        const vloggerSet = {
             id: '1',
             name: 'Vlogger Essentials',
             coverImage: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80',
@@ -217,7 +217,87 @@ const Storage = {
                 }
             ]
         };
-        this.saveSets([dummySet]);
+
+        const plumberSet = {
+            id: '2',
+            name: 'Plumber Toolkit',
+            coverImage: 'https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&q=80',
+            checkCount: 0,
+            items: [
+                {
+                    id: '11',
+                    rfidId: 'RFID011',
+                    name: 'Pipe wrench 24"',
+                    image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400&q=80',
+                    description: 'Heavy-duty adjustable pipe wrench'
+                },
+                {
+                    id: '12',
+                    rfidId: 'RFID012',
+                    name: 'Tube cutter',
+                    image: 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?w=400&q=80',
+                    description: 'Precision copper tube cutter'
+                },
+                {
+                    id: '13',
+                    rfidId: 'RFID013',
+                    name: 'Plunger',
+                    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&q=80',
+                    description: 'Heavy duty toilet plunger'
+                },
+                {
+                    id: '14',
+                    rfidId: 'RFID014',
+                    name: 'Basin wrench',
+                    image: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=400&q=80',
+                    description: 'Long reach basin wrench'
+                },
+                {
+                    id: '15',
+                    rfidId: 'RFID015',
+                    name: 'Torch kit',
+                    image: 'https://images.unsplash.com/photo-1599009434973-7e93f71b4115?w=400&q=80',
+                    description: 'Propane torch for soldering'
+                },
+                {
+                    id: '16',
+                    rfidId: 'RFID016',
+                    name: 'PVC pipe saw',
+                    image: 'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400&q=80',
+                    description: 'Specialized PVC cutting saw'
+                },
+                {
+                    id: '17',
+                    rfidId: 'RFID017',
+                    name: 'Teflon tape',
+                    image: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=400&q=80',
+                    description: 'Thread seal tape roll'
+                },
+                {
+                    id: '18',
+                    rfidId: 'RFID018',
+                    name: 'Inspection camera',
+                    image: 'https://images.unsplash.com/photo-1565843708714-52ecf69ab81f?w=400&q=80',
+                    description: 'Waterproof pipe inspection camera'
+                },
+                {
+                    id: '19',
+                    rfidId: 'RFID019',
+                    name: 'Hacksaw',
+                    image: 'https://images.unsplash.com/photo-1599009434973-7e93f71b4115?w=400&q=80',
+                    description: 'Metal cutting hacksaw'
+                },
+                {
+                    id: '20',
+                    rfidId: 'RFID020',
+                    name: 'Adjustable wrench set',
+                    image: 'https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400&q=80',
+                    description: '3-piece adjustable wrench set'
+                }
+            ]
+        };
+
+        this.saveSets([vloggerSet, plumberSet]);
     }
 };
 
